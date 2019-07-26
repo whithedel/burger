@@ -28,11 +28,11 @@ function objToSql(object){
 
 // Object for all our SQL statement functions.
 var orm = {
-    selectAll: function(tableInput, cd){
+    selectAll: function(tableInput, cb){
         var queryString = `select * from ${tableInput};`;
         connection.query(queryString, function(error, result){
             if (error) throw error;
-            cd(result)
+            cb(result)
         })
     },
     insertOne: function(table, cols, vals, cb) {
@@ -53,4 +53,4 @@ var orm = {
     }
 };
 
-module.export = orm;
+module.exports = orm;
