@@ -1,8 +1,8 @@
 USE burgers_db;
 
 INSERT INTO burgers
-    (burger_name, devoured)
+    (burger_name)
 VALUES
-    ('bison burger', false),
-    ('elk burger', false),
-    ('duck burger', false);
+    ('bison burger'),
+    ('elk burger'),
+    ('duck burger');

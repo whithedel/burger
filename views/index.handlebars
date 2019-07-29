@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h1 class="text-center">Eat the burger MVC</h1>
+    <div class="row">
+        <div class="col-6">
+            <ul class="list-group">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burgers-block}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul class="list-group">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burgers-block}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <h2 class="text-center">Add A Burger to your plate</h2>
+    <div class="row text-center">
+        <div class="col-12">
+            <form class="postForm">
+                <label for="burgers"></label>
+                <br>
+                <input type="text" name="burger_name" id="burgerWanted" placeholder="Build your own burger">
+                <br>
+                <button type="submit" class="btn btn-primary btn-lg">Add this burger</button>
+                <small style="color: royalblue" class="form-text text-muted">Add the information of the burger you would like to eat</small>
+            </form>
+        </div>
+    </div>
+</div>
