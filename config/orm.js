@@ -18,7 +18,7 @@ function objToSql(object){
 
         if (Object.hasOwnProperty.call(object, key)){
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
-                console.log(`${value} it just got there and did reach there`)
+                console.log(`${value} value is define here`)
                 value = `'${value}'`
             }
             array.push(`${key} = ${value}`)
