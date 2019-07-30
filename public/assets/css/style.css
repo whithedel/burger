@@ -11,3 +11,10 @@ h1,h2,small {
 small {
     color: red !important;
 }
+
+li {
+    background-image: url(../images/pexels-photo-617230.jpeg);
+    color: red !important;
+    font: bold;
+    font-size: 2em;
+}
