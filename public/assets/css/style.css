@@ -2,6 +2,7 @@
 
 body {
     background-image: url(../images/pexels-photo-617230.jpeg);
+    text-shadow: .1rem .1rem .1rem black;
 }
 
 h1,h2,small {
