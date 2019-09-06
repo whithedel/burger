@@ -10,7 +10,8 @@ $(`.postForm`).on(`submit`, function(event){
     $.ajax(`/burgers`,{
         type: `POST`,
         data: addedBurger
-    }).then(function(){
+    }).then(function(result){
+        console.log(result);
     console.log("burger created.");
     location.reload();
 })
@@ -26,6 +27,20 @@ $(`.devour`).on(`click`, function(event){
         location.reload();
 
     })
-})
+});
+
+$(`.devoured`).on(`click`, function(event) {
+    var id = $(this).data(`id`);
+    
+    // Send the DELETE request.
+    $.ajax(`/burgers/${id}`, {
+        type: `DELETE`
+    }).then(
+        function () {
+            console.log("deleted burger", id);
+            location.reload();
+        }
+    );
+});
 
 })
